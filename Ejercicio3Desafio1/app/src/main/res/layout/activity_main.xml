@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    tools:context=".MainActivity">
+
+    <!-- Pantalla donde se muestra el resultado -->
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="36sp"
+        android:textColor="#333333"
+        android:background="#FFFFFF"
+        android:padding="16dp"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Primer operando -->
+    <EditText
+        android:id="@+id/etOperando1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Operando 1"
+        android:textSize="18sp"
+        android:background="@drawable/edittext_background"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tvResultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Segundo operando -->
+    <EditText
+        android:id="@+id/etOperando2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Operando 2"
+        android:textSize="18sp"
+        android:background="@drawable/edittext_background"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/etOperando1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Spinner para seleccionar la operación -->
+    <Spinner
+        android:id="@+id/spinnerOperacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/etOperando2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón para calcular -->
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:textSize="18sp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/spinnerOperacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
